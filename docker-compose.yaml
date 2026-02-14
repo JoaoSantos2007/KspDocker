@@ -6,7 +6,7 @@ services:
     stop_grace_period: 30s
 
     ports:
-      - 8800:8800/udp
+      - 6702:6702/udp
     
     volumes:
       - ./test/Config:/data/Config

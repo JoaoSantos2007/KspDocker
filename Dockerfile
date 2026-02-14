@@ -17,7 +17,7 @@ WORKDIR /home/ksp
 
 VOLUME ["/data/Config", "/data/Universe", "/data/logs"]
 
-EXPOSE 8800/udp
+EXPOSE 6702/udp
 
 STOPSIGNAL sigint
 
