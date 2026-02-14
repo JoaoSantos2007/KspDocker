@@ -1,0 +1,21 @@
+services:
+  ksp:
+    build: .
+    container_name: ksp
+    restart: unless-stopped
+    stop_grace_period: 30s
+
+    ports:
+      - 8800:8800/udp
+    
+    volumes:
+      - ./test/Config:/data/Config
+      - ./test/Universe:/data/Universe
+      - ./test/logs:/data/logs
+
+    environment:
+      - PUID=1000
+      - PGID=1000
+      
+    stdin_open: true
+    tty: false
