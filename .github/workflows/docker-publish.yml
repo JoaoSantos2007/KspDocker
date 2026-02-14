@@ -23,7 +23,7 @@ jobs:
         run: echo "OWNER_LC=${GITHUB_REPOSITORY_OWNER,,}" >> $GITHUB_ENV
 
       - name: Build Docker image
-        run: docker build -t ghcr.io/${OWNER_LC}/hytale-server:latest .
+        run: docker build -t ghcr.io/${OWNER_LC}/ksp-server:latest .
 
       - name: Push Docker image
-        run: docker push ghcr.io/${OWNER_LC}/hytale-server:latest
+        run: docker push ghcr.io/${OWNER_LC}/ksp-server:latest
